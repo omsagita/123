@@ -21,7 +21,7 @@ module.exports = handle = (client, Client) => {
                 // data.reply(mess.wait)
 
                 res = await axios.get(`${configs.apiUrl}/api/ytplaymp3/2?apikey=${configs.zeksKey}&q=${data.body}`)
-                if(res.data.status == false) data.reply(res.data.message)
+                if(res.data.status == false) data.reply('Ups maaf server sedang error')
                 ytm = res.data.result
                 teks = `*Judul* : ${ytm.title}\n*Ukuran* : ${ytm.size}\n*Ext* : ${ytm.ext}\n_Silahkan tunggu file media sedang dikirim beberapa menit_`
                 if(Number(ytm.size.split(' MB')[0]) >= 50.00) return Client.sendFileFromUrl(data.from, `${ytm.thumb}`, 'thumb.jpg', `*Data Berhasil Didapatkan!*\n\n*Title* : ${ytm.title}\n*Ukuran* : ${ytm.size}\n*Kualitas* : ${ytm.quality}\n*Ext* : mp3\n*Source* : ${ytm.source}\n*Link* : ${ytm.link}\n\n_Untuk durasi lebih dari batas disajikan dalam bentuk link_`, data.message)
