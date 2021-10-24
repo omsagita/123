@@ -1,0 +1,13 @@
+{	
+	"prefix": "multi", 
+	"defaultSessionName": "sagita", 
+	"zeksKey": "NinoWangy",
+	"autoRead": false,
+	"self": false, 
+	"maxLimit": 0,
+	"ownerList": ["62895331097952@s.whatsapp.net"],
+	"apiUrl": "https://api.zeks.me",
+    "imgUrl": "https://avatars.githubusercontent.com/u/31631825?v=4",
+	"pack": "SagitaBot",
+	"author": "SagitaBot"
+}
